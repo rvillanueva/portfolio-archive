@@ -1,0 +1,55 @@
+<div class="main-page">
+  <div class="splash-section">
+    <div class="splash-wrapper">
+      <div class="splash-sub-wrapper">
+        <img class="profile-pic" src="images/headshot.jpg">
+        <p class="splash-title">Ryan Villanueva</p>
+        <p class="splash-subtitle">Fullstack Javascript Developer
+          <br>Brooklyn, NY</p>
+          <a class="fa fa-github splash-icon" target="_blank" href="https://github.com/rvillanueva"></a>
+          <a class="fa fa-linkedin splash-icon" target="_blank" href="https://linkedin.com/in/RyanjVillanueva"></a>
+          <a class="fa fa-medium splash-icon" target="_blank" href="https://medium.com/@ryanjvillanueva"></a>
+          <a class="fa fa-envelope splash-icon" target="_blank" href="mailto:ryanvill@gmail.com"></a>
+      </div>
+    </div>
+  </div>
+  <div class="skills-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <span ng-repeat="category in main.skillCategories" class="skill-category" ng-class="{'skill-category-selected': main.selectedSkillType == category.value}" ng-click="main.filterSkills(category.value)">{{category.name}}</span>
+        </div>
+        <div class="col-md-8">
+          <ul class="skills-list">
+            <li ng-class="{'skill-primary': skill.important,'skill-selected': main.selectedSkillType == skill.type}" ng-repeat="skill in main.skills | orderBy:'name'">
+              {{skill.name}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="project-section row">
+    <div class="project-panel col-md-6" ng-repeat="(p, project) in main.projects" ng-click="main.navigate('/projects/' + project.id)">
+      <div class="project-panel-background" ng-style="{'background-image': 'url(' + project.imageUrl + ')'}"></div>
+      <div class="project-panel-overlay project-{{p+1}}">
+        <div class="project-text-container">
+          <p class="project-title">{{project.name}}</p>
+          <p class="project-label">{{project.type}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bio-section">
+    <div class="container">
+      <div class="bio-container">
+        <div class="bio-wrapper">
+          Ryan is a California-born, East Coast adoptee who loves creating things that others enjoy using.
+          <br>
+          <br>After graduating from The Wharton School at the University of Pennsylvania, Ryan worked at IBM in both business and developer roles. He experimented with conversational A.I. for a year in Boston before returning to New York to explore additional
+          startup avenues.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

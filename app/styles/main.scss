@@ -1,0 +1,233 @@
+@import '_variables.scss';
+.main-page {
+  & .welcome-section {
+    text-align: center;
+  }
+
+  & .splash-section {
+    height: 520px;
+    background-color: $color-primary;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    display: table;
+    width: 100%;
+    & .splash-wrapper {
+      display: table-cell;
+      vertical-align: middle;
+      & .splash-sub-wrapper {
+        margin-top: 0px;
+      }
+    }
+
+    & .profile-pic {
+      border-radius: 50%;
+      max-height: 160px;
+      border: 4px solid white;
+    }
+    & .splash-title {
+      font-size: 3.6em;
+      font-family: 'Pacifico', 'Helvetica Neue', Helvetica, sans-serif;
+      margin-bottom: 0;
+    }
+    & .splash-subtitle {
+      font-size: 1.2em;
+      font-weight: 200;
+      margin-bottom: 10px;
+    }
+    & a.splash-icon {
+      color: rgba(white, 0.75);
+      font-size: 28px;
+      padding: 4px 6px;
+      &:focus,:active,:visited,:link {
+        text-decoration: none;
+      }
+      &:hover {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .splash-section {
+      height: 680px;
+      & .splash-title {
+        font-size: 4.8em;
+      }
+      & .splash-subtitle {
+        font-size: 1.6em;
+      }
+      & .splash-wrapper {
+        & .splash-sub-wrapper {
+          margin-top: -60px;
+        }
+      }
+    }
+  }
+
+
+  & .skills-section {
+    min-height: 200px;
+    padding: 80px 0;
+    background-color: lighten($color-primary, 4);
+    color: white;
+    & .skill-category {
+      display: block;
+      font-size: 2em;
+      font-weight: bold;
+      padding-bottom: 2px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-left: 40px;
+      margin-right: 40px;
+      &:hover {
+        cursor: pointer;
+        border-bottom: 2px solid white;
+        padding-bottom: 0;
+      }
+    }
+    & .skill-category-selected {
+      border-bottom: 2px solid white;
+      padding-bottom: 0;
+    }
+    ul.skills-list {
+      margin-left: -10px;
+      & li {
+        display: inline-block;
+        border-width: 1px;
+        border-radius: 3px;
+        border-style: solid;
+        border-color: transparent;
+        padding: 4px 6px;
+        margin: 4px 6px;
+        text-transform: uppercase;
+        &.skill-primary {
+          font-size: 1.4em;
+        }
+        &.skill-selected {
+          border-color: white;
+          -webkit-transition: border-color 1s ease;
+           -moz-transition: border-color 1s ease;
+             -o-transition: border-color 1s ease;
+            -ms-transition: border-color 1s ease;
+                transition: border-color 1s ease;
+        }
+
+      }
+    }
+
+
+  }
+
+
+
+  & .project-section {
+    margin: 0;
+    position: relative;
+    & .project-panel {
+      height: 400px;
+      margin: 0;
+      padding: 0;
+      background-color: $color-primary;
+      &:hover .project-text-container {
+        visibility: visible;
+        -webkit-transition: visibility 0.2s ease;
+         -moz-transition: visibility 0.2s ease;
+           -o-transition: visibility 0.2s ease;
+          -ms-transition: visibility 0.2s ease;
+              transition: visibility 0.2s ease;
+              padding-bottom: 32px;
+      }
+      p {
+        margin: 0;
+      }
+      & .project-text-container {
+        visibility: visible;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        text-align: left;
+        color: white;
+        padding: 40px;
+        & .project-label {
+          font-size: 1em;
+        }
+        & .project-title {
+          font-weight: bold;
+          font-size: 2em;
+          text-transform: uppercase;
+        }
+      }
+      & .project-panel-background {
+        height:100%;
+        width: 100%;
+        background-size: cover;
+        background-position: top left;
+      }
+
+      & .project-panel-overlay {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        padding: 40px;
+        background-color: rgba(darken($color-primary, 2), 0.8);
+        &:hover {
+          border-bottom: 8px solid white;
+          background-color: rgba(darken($color-primary, 6), 0.9);
+          -webkit-transition: background-color 0.2s ease;
+           -moz-transition: background-color 0.2s ease;
+             -o-transition: background-color 0.2s ease;
+            -ms-transition: background-color 0.2s ease;
+                transition: background-color 0.2s ease;
+
+          cursor: pointer;
+        }
+      }
+
+      @for $i from 1 through 10 {
+        .project-#{$i} {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  & .bio-section {
+    padding: 60px;
+    background-color: white;
+    color: $text-dark;
+    font-size: 1.2em;
+    .bio-spacer {
+      height: 160px;
+    }
+    .helper {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    & .profile-pic {
+      border-radius: 50%;
+      margin-right: 60px;
+      max-height: 200px;
+      float: left;
+      border: 4px solid white;
+    }
+    & .bio-container {
+      display: table;
+      width: 100%;
+      height: 300px;
+    }
+    & .bio-wrapper {
+      display: table-cell;
+      vertical-align: middle;
+      margin-bottom: 40px;
+    }
+  }
+
+}

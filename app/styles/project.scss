@@ -1,0 +1,57 @@
+@import '_variables.scss';
+
+.project-page {
+  & .project-carousel-container {
+    background-color: $color-primary;
+    color: white;
+    padding: 18px 0 36px 0;
+    text-align: center;
+    min-height: 400px;
+    max-height: 500px;
+    overflow: hidden;
+    & .slick-prev, .slick-next {
+      &:before {
+        color: white;
+      }
+    }
+    & .project-slide {
+      max-height: 420px;
+    }
+    & .slide-invisible {
+      opacity: 0;
+    }
+  }
+  & .project-heading {
+    color: $text-dark;
+    background-color: white;
+    padding: 60px 20px;
+    & .project-title {
+      text-align: center;
+      padding-bottom: 40px;
+      font-size: 3em;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+  & .other-projects {
+    text-align: center;
+    padding: 40px 20px;
+    & .other-projects-heading {
+      font-family: 'Pacifico', 'Helvetica Neue', Helvetica, sans-serif;
+      font-size: 1.4em;
+      padding: 12px;
+    }
+    a.project-link{
+      color: white;
+      text-decoration: none;
+      padding: 4px 0;
+      margin: 0 6px;
+      &:hover {
+        border-bottom: 1px solid white;
+        padding-bottom: 3px;
+        text-decoration: none;
+        font-weight: normal;
+      }
+    }
+  }
+}
