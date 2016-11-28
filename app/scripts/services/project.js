@@ -53,6 +53,13 @@ angular.module('ryanApp')
         url: 'images/projects/resupply/5.png'
       }]
     },{
+      id: 'retail',
+      name: 'Computer Vision Pitch',
+      type: 'Video demonstrating retail applications of image classification technologies.',
+      imageUrl: 'images/projects/retail/1.png',
+      imagePosition: 'center top',
+      videoUrl: 'https://player.vimeo.com/video/97888208'
+    },{
       id: 'florence',
       name: 'Florence.ai',
       type: 'Improving treatment adherence using conversational A.I.',
@@ -86,6 +93,7 @@ angular.module('ryanApp')
       name: 'Community Analytics',
       type: 'Local intelligence for restaurant franchises.',
       imageUrl: 'images/projects/community/1.png',
+      imagePosition: 'center top',
       description: 'This social dashboard was an overnight prototype to demonstrate how IBM Research social analytics could help restaurant franchise owners to understand their local community. The early demo integrated the Yelp API to compare reviews against local franchises, while later iterations integrated Twitter and social event data.',
       roleDescription: 'During a two day workshop with a the innovation team at a global restaurant franchise, I took one of the suggestions created on the first day and created a functional prototype overnight. The client expressed that they were incredibly impressed the next day, and the prototype was later cited as a reason for continued engagement.',
       carousel: [{
@@ -102,7 +110,8 @@ angular.module('ryanApp')
       id: 'weaver',
       name: 'Weaver',
       type: 'Cognitive application for real-time news analysis using IBM Watson services.',
-      imageUrl: 'images/projects/weaver/1.png'
+      imageUrl: 'images/projects/weaver/1.png',
+      imagePosition: 'center top'
     }]
 
     // Public API here

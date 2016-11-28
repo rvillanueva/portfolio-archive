@@ -2,10 +2,13 @@
 <div class="project-page">
   <div class="project-carousel-container">
     <div class="container container-unpadded">
-      <div class="project-carousel">
+      <div ng-if="project.p.carousel" class="project-carousel">
         <div ng-repeat="slide in project.p.carousel">
           <img ng-class="{'slide-invisible': !project.loaded && $index !== 0}" class="project-slide" ng-src="{{slide.url}}">
         </div>
+      </div>
+      <div ng-if="project.p.videoUrl">
+        <iframe ng-src="{{project.trustSrc(project.p.videoUrl)}}" width="100%" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -35,3 +38,4 @@
     </div>
   </div>
 </div>
+<div ng-include="'../../components/footer.html'"></div>

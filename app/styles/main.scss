@@ -28,12 +28,12 @@
     & .splash-title {
       font-size: 3.6em;
       font-family: 'Pacifico', 'Helvetica Neue', Helvetica, sans-serif;
-      margin-bottom: 0;
+      margin-bottom: -6px;
     }
     & .splash-subtitle {
       font-size: 1.2em;
       font-weight: 200;
-      margin-bottom: 10px;
+      margin-bottom: 16px;
     }
     & a.splash-icon {
       color: rgba(white, 0.75);
@@ -56,7 +56,7 @@
         font-size: 4.8em;
       }
       & .splash-subtitle {
-        font-size: 1.6em;
+        font-size: 1.4em;
       }
       & .splash-wrapper {
         & .splash-sub-wrapper {
@@ -125,38 +125,41 @@
   & .project-section {
     margin: 0;
     position: relative;
-    & .project-panel {
-      height: 400px;
+    padding: 20px 40px;
+    & .project-panel-container {
+      height: 360px;
       margin: 0;
-      padding: 0;
-      background-color: $color-primary;
-      &:hover .project-text-container {
-        visibility: visible;
-        -webkit-transition: visibility 0.2s ease;
-         -moz-transition: visibility 0.2s ease;
-           -o-transition: visibility 0.2s ease;
-          -ms-transition: visibility 0.2s ease;
-              transition: visibility 0.2s ease;
-              padding-bottom: 32px;
+      padding: 32px;
+      & .project-panel {
+        background-color: white;
+        border-radius: 6px;
+        padding: 18px;
+        height: 100%;
+        width: 100%;
+        & .project-panel-content {
+          position: relative;
+          height: 100%;
+          width: 100%;
+        }
       }
       p {
         margin: 0;
       }
       & .project-text-container {
-        visibility: visible;
+        visibility: hidden;
         position: absolute;
         bottom: 0;
         right: 0;
         left: 0;
         text-align: left;
-        color: white;
-        padding: 40px;
+        color: $text-dark;
+        padding: 18px;
         & .project-label {
           font-size: 1em;
         }
         & .project-title {
           font-weight: bold;
-          font-size: 2em;
+          font-size: 1.6em;
           text-transform: uppercase;
         }
       }
@@ -173,16 +176,21 @@
         right: 0;
         left: 0;
         top: 0;
-        padding: 40px;
-        background-color: rgba(darken($color-primary, 2), 0.8);
+        &:hover .project-text-container {
+          visibility: visible;
+          -webkit-transition: visibility 0.8s ease;
+           -moz-transition: visibility 0.8s ease;
+             -o-transition: visibility 0.8s ease;
+            -ms-transition: visibility 0.8s ease;
+                transition: visibility 0.8s ease;
+        }
         &:hover {
-          border-bottom: 8px solid white;
-          background-color: rgba(darken($color-primary, 6), 0.9);
-          -webkit-transition: background-color 0.2s ease;
-           -moz-transition: background-color 0.2s ease;
-             -o-transition: background-color 0.2s ease;
-            -ms-transition: background-color 0.2s ease;
-                transition: background-color 0.2s ease;
+          background-color: rgba(white, 0.9);
+          -webkit-transition: background-color 0.3s ease;
+           -moz-transition: background-color 0.3s ease;
+             -o-transition: background-color 0.3s ease;
+            -ms-transition: background-color 0.3s ease;
+                transition: background-color 0.3s ease;
 
           cursor: pointer;
         }
