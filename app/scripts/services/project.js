@@ -16,8 +16,8 @@ angular.module('ryanApp')
       name: 'Compass',
       type: 'Global tool for managing client visits to IBM Research innovation labs.',
       imageUrl: 'images/projects/compass/1.png',
-      description: '',
-      roleDescription: '',
+      description: 'The Compass was originally developed as a standalone catalog of IBM Research projects. Over time, it expanded to become the central platform for managing client visits to the flagship innovation lab. Over two years it processed over 400 clients.',
+      roleDescription: 'I started this project as a way to distribute information about IBM Research projects around the world. As we continued operations in our innovation lab, we began to receive a much higher volume of visit requests and needed to process them systematically.\n\nAs tool lead, I regularly worked with our team and other internal stakeholders to map out requirements, develop features, and deploy them for use.',
       carousel: [{
         url: 'images/projects/compass/1.png'
       },
@@ -54,8 +54,9 @@ angular.module('ryanApp')
       }]
     },{
       id: 'retail',
-      name: 'Computer Vision Pitch',
-      type: 'Video demonstrating retail applications of image classification technologies.',
+      name: 'See Your Dreams',
+      type: 'Video demonstrating retail applications of computer vision.',
+      description: 'IBM sought to demonstrate its computer vision companies using compelling and creative materials. From an initial problem statement, I storyboarded and created a marketing video for client. It was received very well by the client and led to additional conversations about IBM technologies.',
       imageUrl: 'images/projects/retail/1.png',
       imagePosition: 'center top',
       videoUrl: 'https://player.vimeo.com/video/97888208'
@@ -64,6 +65,8 @@ angular.module('ryanApp')
       name: 'Florence.ai',
       type: 'Improving treatment adherence using conversational A.I.',
       imageUrl: 'images/projects/florence/1.png',
+      description: 'Florence is a conversational A.I. platform that manages patient adherence. Set goals for your patients, like "Exercise thirty minutes a day" or "Take your medication twice daily". Florence dynamically understands these goals and regularly checks in with your patients to track their progress. When they deviate from their goals, Florence works with them to understand why and report back any barriers they may encounter.',
+      roleDescription: 'During the development process, conducted user research with key stakeholders such as care providers, patients, and administrators. Developed several functional prototypes using SMS and Facebook Messenger. Tested both the texting interactions and analytics dashboards with care providers.',
       carousel: [{
         url: 'images/projects/florence/1.png'
       }]
@@ -110,8 +113,25 @@ angular.module('ryanApp')
       id: 'weaver',
       name: 'Weaver',
       type: 'Cognitive application for real-time news analysis using IBM Watson services.',
+      description: 'Created for an IBM challenge to integate Watson services. Weaver pulls scraped news articles and analyzes the natural language. It then structures the analysis into human readable format, including timeline and entity relationship graphs.',
       imageUrl: 'images/projects/weaver/1.png',
-      imagePosition: 'center top'
+      imagePosition: 'center top',
+      carousel: [{
+        url: 'images/projects/weaver/1.png'
+      },
+      {
+        url: 'images/projects/weaver/2.png'
+      },
+      {
+        url: 'images/projects/weaver/3.png'
+      },
+      {
+        url: 'images/projects/weaver/4.png'
+      },
+      {
+        url: 'images/projects/weaver/5.png'
+      }]
+
     }]
 
     // Public API here

@@ -1,4 +1,5 @@
 @import '_variables.scss';
+
 .main-page {
   & .welcome-section {
     text-align: center;
@@ -45,23 +46,6 @@
       &:hover {
         text-decoration: none;
         color: white;
-      }
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    .splash-section {
-      height: 680px;
-      & .splash-title {
-        font-size: 4.8em;
-      }
-      & .splash-subtitle {
-        font-size: 1.4em;
-      }
-      & .splash-wrapper {
-        & .splash-sub-wrapper {
-          margin-top: -60px;
-        }
       }
     }
   }
@@ -132,6 +116,7 @@
       padding: 32px;
       & .project-panel {
         background-color: white;
+        box-shadow: 1px 1px 1px 1px rgba(73, 18, 18, 0.3);
         border-radius: 6px;
         padding: 18px;
         height: 100%;
@@ -146,7 +131,7 @@
         margin: 0;
       }
       & .project-text-container {
-        visibility: hidden;
+        visibility: visible;
         position: absolute;
         bottom: 0;
         right: 0;
@@ -176,6 +161,7 @@
         right: 0;
         left: 0;
         top: 0;
+        background-color: rgba(white, 0.3);
         &:hover .project-text-container {
           visibility: visible;
           -webkit-transition: visibility 0.8s ease;
@@ -236,6 +222,40 @@
       vertical-align: middle;
       margin-bottom: 40px;
     }
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .main-page {
+    & .project-section .project-panel-container .project-panel {
+      & .project-panel-overlay {
+        background-color: transparent;
+        &:hover {
+          background-color: rgba(white, 0.9);
+        }
+      }
+      & .project-text-container {
+        visibility: hidden;
+      }
+    }
+    & .splash-section {
+      height: 680px;
+      & .splash-title {
+        font-size: 4.8em;
+      }
+      & .splash-subtitle {
+        font-size: 1.4em;
+      }
+      & .splash-wrapper {
+        & .splash-sub-wrapper {
+          margin-top: -60px;
+        }
+      }
+
+    }
+
   }
 
 }
