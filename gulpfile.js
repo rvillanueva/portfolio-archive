@@ -8,6 +8,7 @@ var lazypipe = require('lazypipe');
 var rimraf = require('rimraf');
 var wiredep = require('wiredep').stream;
 var runSequence = require('run-sequence');
+var gutil = require('gulp-util');
 
 var yeoman = {
   app: require('./bower.json').appPath || 'app',
@@ -31,7 +32,7 @@ var paths = {
   karma: 'karma.conf.js',
   views: {
     main: yeoman.app + '/index.html',
-    files: [yeoman.app + '/routes/**/*.html']
+    files: [yeoman.app + '/**/*.html']
   }
 };
 
@@ -169,9 +170,10 @@ gulp.task('client:build', ['html', 'styles'], function () {
 
   return gulp.src(paths.views.main)
     .pipe($.useref({searchPath: [yeoman.app, '.tmp']}))
+    .pipe(gulp.dest('./tmp/dist')) // output an intermediate copy of app.min.js
     .pipe(jsFilter)
     .pipe($.ngAnnotate())
-    .pipe($.uglify())
+    .pipe($.uglify().on('error', gutil.log))
     .pipe(jsFilter.restore())
     .pipe(cssFilter)
     .pipe($.minifyCss({cache: true}))

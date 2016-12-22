@@ -4,7 +4,7 @@
     <div class="container container-unpadded">
       <div ng-if="project.p.carousel" class="project-carousel">
         <div ng-repeat="slide in project.p.carousel">
-          <img ng-class="{'slide-invisible': !project.loaded && $index !== 0}" class="project-slide" ng-src="{{slide.url}}">
+          <img class="project-slide" ng-src="{{slide.url}}">
         </div>
       </div>
       <div ng-if="project.p.videoUrl">
@@ -18,6 +18,10 @@
         <div class="project-title">
           {{project.p.name}}
         </div>
+      </div>
+      <div ng-show="project.p.githubUrl || project.p.demoUrl" class="row project-link-row">
+        <a target="_blank" href="{{project.p.demoUrl}}" class="project-link" ng-show="project.p.demoUrl">Demo</a>
+        <a target="_blank" href="{{project.p.githubUrl}}" class="project-link" ng-show="project.p.githubUrl">Github</a>
       </div>
       <div class="row">
         <div class="col-md-6">

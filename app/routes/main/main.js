@@ -16,12 +16,12 @@ angular.module('ryanApp')
       } else {
         this.selectedSkillType = '!!';
       }
-    }
+    };
     this.navigate = function(path){
       if(path){
-        $location.path(path)
+        $location.path(path);
       }
-    }
+    };
     this.skills = [
       {
         name: 'Angular 1',
@@ -48,14 +48,6 @@ angular.module('ryanApp')
         type: 'frontend'
       },
       {
-        name: 'Angular 2',
-        type: 'frontend'
-      },
-      {
-        name: 'npm',
-        type: 'devops'
-      },
-      {
         name: 'ECMA 6',
         type: 'backend'
       },
@@ -78,10 +70,6 @@ angular.module('ryanApp')
       {
         name: 'OAuth 2.0',
         type: 'backend'
-      },
-      {
-        name: 'InDesign',
-        type: 'design'
       },
       {
         name: 'Gulp',
@@ -114,11 +102,7 @@ angular.module('ryanApp')
       {
         name: 'Photoshop',
         type: 'design'
-      },
-      {
-        name: 'Sketch',
-        type: 'design'
-      },
+      }
     ];
 
     this.projects = projectFactory.all();
@@ -140,5 +124,5 @@ angular.module('ryanApp')
       name: 'DevOps',
       value: 'devops'
     }
-    ]
+  ];
   });
